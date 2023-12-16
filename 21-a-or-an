@@ -1,0 +1,12 @@
+public String aOrAn(String word) {
+    //code here
+    String wordWithAorAn = '';
+    String firstChar = word.substring(0,1);
+    if(firstChar == 'a' || firstChar == 'e' 
+    || firstChar == 'i' || firstChar == 'o' || firstChar == 'u'){
+        wordWithAorAn = 'an'+' '+word;
+    }else{
+        wordWithAorAn = 'a'+' '+word;
+    }
+    return wordWithAorAn;
+}
