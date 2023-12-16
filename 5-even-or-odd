@@ -1,0 +1,11 @@
+public String evenOrOdd(Integer num) {
+    //code here
+    String numberType = '';
+    Integer reminder = Math.mod(num,2);
+    if(reminder==0){
+        numberType = 'even';
+    }else{
+        numberType = 'odd';
+    }
+    return numberType;
+}
