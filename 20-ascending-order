@@ -1,0 +1,13 @@
+public Boolean ascendingOrder(Integer a, Integer b, Integer c) {
+    Boolean isAscending;
+    if(a<=b){
+        if(b<=c){
+            isAscending = true;
+        }else{
+            isAscending = false;
+        }
+    }else{
+        isAscending = false;
+    }
+    return isAscending;
+}
