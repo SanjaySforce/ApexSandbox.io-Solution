@@ -1,0 +1,11 @@
+public Boolean isEndWithZero(Integer num){
+     //code here
+     Boolean isEndsWithZero;
+     Integer reminder = Math.mod(num,10);
+     if(reminder == 0){
+         isEndsWithZero = true;
+     }else{
+         isEndsWithZero = false;
+     }
+    return isEndsWithZero;
+}
