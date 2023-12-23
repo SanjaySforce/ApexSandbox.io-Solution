@@ -1,22 +1,22 @@
 public Boolean companionPlants(String plant1, String plant2) {
     //code here
     Boolean isCompanion = false;
-    if(plant1 == 'lettuce' && plant2 == 'cucumbers'){
-        isCompanion = true;
-    }else if(plant1 == 'cucumbers' && plant2 == 'lettuce'){
-        isCompanion = true;
-    }else if(plant1 == 'lettuce' && plant2 == 'onions'){
-        isCompanion = true;
-    }else if(plant1 == 'onions' && plant2 == 'lettuce'){
-        isCompanion = true;
-    }else if(plant1 == 'onions' && plant2 == 'carrots'){
-        isCompanion = true;
-    }else if(plant1 == 'carrots' && plant2 == 'onions'){
-        isCompanion = true;
-    }else if(plant1 == 'onions' && plant2 == 'tomatoes'){
-        isCompanion = true;
-    }else if(plant1 == 'tomatoes' && plant2 == 'onions'){
-        isCompanion = true;
+    if(plant1 == 'lettuce' {
+        if(plant2 == 'cucumbers' || plant2 == 'onions'){
+            isCompanion = true;
+        }
+    }else if(plant2 == 'lettuce' {
+        if(plant1 == 'cucumbers' || plant1 == 'onions'){
+            isCompanion = true;
+        }
+    }else if(plant1 == 'onions' {
+        if(plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes'){
+            isCompanion = true;
+        }
+    }else if(plant2 == 'onions'){
+        if(plant1 == 'lettuce' || plant1 == 'carrots' || plant1 == 'tomatoes'){
+            isCompanion = true;
+        }
     }
     return isCompanion;
 }
