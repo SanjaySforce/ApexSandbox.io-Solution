@@ -3,11 +3,19 @@ public Boolean companionPlants(String plant1, String plant2) {
     Boolean isCompanion = false;
     if(plant1 == 'lettuce' && plant2 == 'cucumbers'){
         isCompanion = true;
+    }else if(plant1 == 'cucumbers' && plant2 == 'lettuce'){
+        isCompanion = true;
     }else if(plant1 == 'lettuce' && plant2 == 'onions'){
+        isCompanion = true;
+    }else if(plant1 == 'onions' && plant2 == 'lettuce'){
         isCompanion = true;
     }else if(plant1 == 'onions' && plant2 == 'carrots'){
         isCompanion = true;
+    }else if(plant1 == 'carrots' && plant2 == 'onions'){
+        isCompanion = true;
     }else if(plant1 == 'onions' && plant2 == 'tomatoes'){
+        isCompanion = true;
+    }else if(plant1 == 'tomatoes' && plant2 == 'onions'){
         isCompanion = true;
     }
     return isCompanion;
