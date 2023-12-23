@@ -4,12 +4,8 @@ public Boolean isLeapYear(Integer year) {
     Integer divisibleByFour = Math.mod(year,4);
     Integer divisibleByHundred = Math.mod(year,100);
     Integer divisibleByFourHundred = Math.mod(year,400);
-    if(divisibleByFour == 0){
-        if(divisibleByHundred == 0){
-            if(divisibleByFourHundred == 0){
-                isLeapYear = true;
-            }
-        }
+    if((divisibleByFour == 0 && divisibleByHundred != 0)|| divisibleByFourHundred == 0){
+        isLeapYear = true;
     }
     return isLeapYear;
 }
