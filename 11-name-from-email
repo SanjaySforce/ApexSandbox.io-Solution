@@ -1,0 +1,7 @@
+public String nameFromEmail(String email) {
+    //code here
+    String tempName = email.substringBefore('@');
+    String firstName = tempName.substringBefore('.');
+    String lastName = tempName.substringAfter('.');
+    return firstName+' '+lastName;
+}
