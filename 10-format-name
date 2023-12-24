@@ -1,12 +1,14 @@
 public String formatName(String firstName, String lastName) {
     //code here
-    String fullName = null;
-    if((firstName != null || firstName != '') && (lastName != null || lastName != '')){
-        fullName = lastName+','+' '+firstName;
-    }else if(firstName != null || firstName != ''){
-        fullName = firstName;
-    }else if(lastName != null || lastName != ''){
-        fullName = lastName;
-    }
+    String fullName = '';
+   if (String.isBlank(firstName) && String.isBlank(lastName)) {
+            fullName = ''; // If both names are null or empty, return an empty string
+        } else if (String.isBlank(firstName)) {
+            fullName = lastName.trim(); // If firstName is null or empty, return lastName
+        } else if (String.isBlank(lastName)) {
+            fullName = firstName.trim(); // If lastName is null or empty, return firstName
+        } else {
+            fullName = lastName.trim() + ', ' + firstName.trim(); // Concatenate lastName and firstName in the required format
+        }
     return fullName;
 }
