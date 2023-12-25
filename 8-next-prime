@@ -1,28 +1,29 @@
 public Integer nextPrime(Integer num) {
     //code here
    Integer next = num + 1;
-   Boolean isPrime = true;
-    while (true) {
-    if (next <= 1) {
-        isPrime = false;
-    } else if (next <= 3) {
-        isPrime = true;
-    } else if (Math.mod(next, 2) == 0 || Math.mod(next, 3) == 0) {
-        isPrime = false;
-    } else {
-        Integer i = 5;
-        while (i * i <= next) {
-        if (Math.mod(next, i) == 0 || Math.mod(next, i + 2) == 0) {
-            isPrime = false;
-            break;
+        while (true) {
+            Boolean isPrime = true;
+            if (next <= 1) {
+                isPrime = false;
+            } else if (next <= 3) {
+                isPrime = true;
+            } else if (Math.mod(next, 2) == 0 || Math.mod(next, 3) == 0) {
+                isPrime = false;
+            } else {
+                Integer i = 5;
+                while (i * i <= next) {
+                    if (Math.mod(next, i) == 0 || Math.mod(next, i + 2) == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                    i += 6;
+                }
+            }
+            if (isPrime) {
+                return next;
+            }else{
+                return next-next;
+            }
+            next++;
         }
-            i += 6;
-        }
-    }
-    next++;
-  }if(isPrime == true){
-        return next;
-  }else{
-      return next;
-  }
 }
