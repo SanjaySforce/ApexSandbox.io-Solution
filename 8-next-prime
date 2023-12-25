@@ -1,21 +1,23 @@
 public Integer nextPrime(Integer num) {
     //code here
-         Integer next = num + 1;
+   Integer next = num + 1;
+   Boolean isPrime = true;
+   if(num<=1){
+       next = 2;
+   }else{
         while (true) {
-            if (isPrime(next)) {
-                return next;
+            {
+                for (Integer i = 2; i <= next; i++) {
+                    if (Math.mod(next, i) == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
             }
             next++;
         }
-}
- public static Boolean isPrime(Integer n) {
-        if (n <= 1) {
-            return false;
-        }
-        for (Integer i = 2; i <= Math.sqrt(n); i++) {
-            if (Math.mod(n, i) == 0) {
-                return false;
-            }
-        }
-        return true;
+   }
+    if (isPrime) {
+        return next;
     }
+}
