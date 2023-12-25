@@ -22,5 +22,7 @@ public Integer nextPrime(Integer num) {
     next++;
   }if(isPrime == true){
         return next;
+  }else{
+      return next;
   }
 }
