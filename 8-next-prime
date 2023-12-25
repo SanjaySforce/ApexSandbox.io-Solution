@@ -2,18 +2,25 @@ public Integer nextPrime(Integer num) {
     //code here
    Integer next = num + 1;
    Boolean isPrime = true;
-   if(num<=1){
-       next = 2;
-   }else{
-        while (true) {
-                for (Integer i = 2; i <= next; i++) {
-                    if (Math.mod(next, i) == 0) {
-                        isPrime = false;
-                        break;
-                    }
-                }
-            next++;
+    while (true) {
+    if (next <= 1) {
+        isPrime = false;
+    } else if (next <= 3) {
+        isPrime = true;
+    } else if (Math.mod(next, 2) == 0 || Math.mod(next, 3) == 0) {
+        isPrime = false;
+    } else {
+        Integer i = 5;
+        while (i * i <= next) {
+        if (Math.mod(next, i) == 0 || Math.mod(next, i + 2) == 0) {
+            isPrime = false;
+            break;
         }
-   }
-  return next;
+            i += 6;
+        }
+    }
+    next++;
+  }if(isPrime == true){
+        return next;
+  }
 }
