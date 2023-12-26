@@ -1,16 +1,22 @@
 public Integer nextPrime(Integer num) {
-    //code here
-   Integer next = num + 1;
+   //code here
+   Integer nxtPrime = 0;
+   Integer next = num+1;
+   if(num <= 1){
+       nxtPrime = 2;
+   }
    Boolean isPrime = true;
-   for(next;;next++;){
-        for (var d = 2; d * d <= next; d++) {
-            if(Math.mod(next,d) == 0){
+   while(!isPrime){
+        for(Integer i=next; i<next+1; i++){
+            if(Math.mod(num,i) == 0){
                 isPrime = false;
                 break;
             }
         }
-    if(isPrime){
-       return next;
-    }    
+        next++
    }
+   if(isPrime){
+       nxtPrime = next;
+   }
+   return nxtPrime;
 }
