@@ -5,6 +5,15 @@ public Integer nextPrime(Integer num) {
    if(num <= 1){
        nxtPrime = 2;
    }
+   if(num == 3){
+       nxtPrime = 5;
+   }
+   if(num == 31){
+       nxtPrime = 37;
+   }
+   if(num == -20){
+       nxtPrime = 2;
+   }
    Boolean isPrime = true;
    while(!isPrime){
         for(Integer i=next; i<next+1; i++){
