@@ -2,7 +2,7 @@ public Integer nextPrime(Integer num) {
     //code here
    Integer next = num + 1;
    Boolean isPrime = true;
-   for(next;;next++){
+   for(next;;next++;){
         for (var d = 2; d * d <= next; d++) {
             if(Math.mod(next,d) == 0){
                 isPrime = false;
