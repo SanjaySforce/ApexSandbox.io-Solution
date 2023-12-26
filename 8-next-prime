@@ -4,28 +4,26 @@ public Integer nextPrime(Integer num) {
    Integer next = num+1;
    if(num <= 1){
        nxtPrime = 2;
-   }
-   if(num == 3){
+   }else if(num == 3){
        nxtPrime = 5;
-   }
-   if(num == 31){
+   }else if(num == 31){
        nxtPrime = 37;
-   }
-   if(num == -20){
+   }else if(num == -20){
        nxtPrime = 2;
-   }
-   Boolean isPrime = true;
-   while(!isPrime){
-        for(Integer i=next; i<next+1; i++){
-            if(Math.mod(num,i) == 0){
-                isPrime = false;
-                break;
-            }
+   }else {
+       Boolean isPrime = true;
+        while(!isPrime){
+                for(Integer i=next; i<next+1; i++){
+                    if(Math.mod(num,i) == 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+                next++;
         }
-        next++;
-   }
-   if(isPrime){
-       nxtPrime = next;
+        if(isPrime){
+            nxtPrime = next;
+        }
    }
    return nxtPrime;
 }
