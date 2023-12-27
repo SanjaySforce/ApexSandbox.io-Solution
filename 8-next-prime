@@ -1,28 +1,25 @@
 public Integer nextPrime(Integer num) {
    //code here
    Integer nxtPrime = 0;
-   Integer next = num+1;
-   if(num <= 1){
-       nxtPrime = 2;
-   }else if(num == 31){
-       nxtPrime = 37;
-   }else if(num == -20){
-       nxtPrime = 2;
-   }else {
-       Boolean isPrime = false;
-        while(!isPrime){
-                for(Integer i=2; i<next; i++){
-                    if(Math.mod(next,i) == 0){
-                        isPrime = false;
-                    }
+   Integer next = num + 1;
+    if (num <= 1) {
+        nxtPrime = 2;
+    } else {
+        Boolean isPrime;
+        while (true) {
+            isPrime = true; // Assume next is prime initially
+            for (Integer i = 2; i <= Math.sqrt(next); i++) {
+                if (Math.mod(next,i) == 0) {
+                    isPrime = false;
+                    break; // If divisible, not a prime number, exit the loop
                 }
-            if(isPrime == false){
-                next++;
             }
+            if (isPrime) {
+                nxtPrime = next;
+                break; // Found the next prime, exit the loop
+            }
+            next++; // Move to the next number to check for primality
         }
-        if(isPrime){
-            nxtPrime = next;
-        }
-   }
+    }
    return nxtPrime;
 }
