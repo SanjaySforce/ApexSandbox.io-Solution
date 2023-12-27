@@ -10,7 +10,7 @@ public Integer nextPrime(Integer num) {
        nxtPrime = 2;
    }else {
        Boolean isPrime = true;
-        while(!isPrime){
+        while(isPrime){
                 for(Integer i=2; i<next; i++){
                     if(Math.mod(next,i) == 0){
                         isPrime = false;
