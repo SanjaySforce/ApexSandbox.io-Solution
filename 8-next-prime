@@ -9,15 +9,16 @@ public Integer nextPrime(Integer num) {
    }else if(num == -20){
        nxtPrime = 2;
    }else {
-       Boolean isPrime = true;
+       Boolean isPrime = false;
         while(isPrime){
                 for(Integer i=2; i<next; i++){
                     if(Math.mod(next,i) == 0){
                         isPrime = false;
-                        break;
                     }
                 }
+            if(isPrime == false){
                 next++;
+            }
         }
         if(isPrime){
             nxtPrime = next;
