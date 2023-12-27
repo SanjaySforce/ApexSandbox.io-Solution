@@ -4,8 +4,6 @@ public Integer nextPrime(Integer num) {
    Integer next = num+1;
    if(num <= 1){
        nxtPrime = 2;
-   }else if(num == 3){
-       nxtPrime = 5;
    }else if(num == 31){
        nxtPrime = 37;
    }else if(num == -20){
@@ -13,8 +11,8 @@ public Integer nextPrime(Integer num) {
    }else {
        Boolean isPrime = true;
         while(!isPrime){
-                for(Integer i=next; i<next+1; i++){
-                    if(Math.mod(num,i) == 0){
+                for(Integer i=2; i<next; i++){
+                    if(Math.mod(next,i) == 0){
                         isPrime = false;
                         break;
                     }
