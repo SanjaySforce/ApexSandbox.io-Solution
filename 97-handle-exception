@@ -1,7 +1,9 @@
 public String divide(Integer a, Integer b){
     //code here
     String result = '';
-    if(b == 0){
+    if(b == 0 || b == null){
+        result = 'Divide by 0';
+    }else if(a == null){
         result = 'Divide by 0';
     }else{
         result = string.ValueOf(Math.mod(a,b));
