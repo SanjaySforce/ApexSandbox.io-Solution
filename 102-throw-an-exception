@@ -1,0 +1,24 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    // code here
+    boolean isBillingCity = false;
+    if(accounts.size()==0){
+        throw new IllegalArgumentException('accounts should not be null');
+    }else{
+        for(Account acc: accounts){
+            if(acc.BillingCity == null){
+                throw new AccountException('Invalid BillingCity');
+            }else{
+                 isBillingCity = true;
+            }
+        }
+    }
+    if(isBillingCity){
+        return accounts;
+    }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {
+
+}
