@@ -1,12 +1,12 @@
 public String divide(Integer a, Integer b){
     //code here
     String result = '';
-    if(b == 0 || b == null){
+    if(b == 0 ){
         result = 'Divide by 0';
-    }else if(a == null){
-        result = 'Divide by 0';
+    }else if(a == null || b == null){
+        result = 'Attempt to de-reference a null object';
     }else{
-        result = string.ValueOf(Math.mod(a,b));
+        result = string.ValueOf(ceil(a/b));
     }
     return result;
 }
