@@ -1,14 +1,14 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
     // code here
-    if(accounts.size()==0 || accounts == null){
-        throw new IllegalArgumentException('accounts should not be null');
-    }else{
-        for(Account acc: accounts){
+    if(accounts.size() > 0 || accounts != null){
+         for(Account acc: accounts){
             if(acc.BillingCity == null){
                 throw new AccountException('Invalid BillingCity');
             }
         }
+    }else{
+        throw new IllegalArgumentException('accounts should not be null');
     }        
     return accounts;
 }
