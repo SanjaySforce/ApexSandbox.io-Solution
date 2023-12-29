@@ -6,7 +6,7 @@ public String divide(Integer a, Integer b){
     }else if(a == null || b == null){
         result = 'Attempt to de-reference a null object';
     }else{
-        result = string.ValueOf(ceil(a/b));
+        result = string.ValueOf(a/b);
     }
     return result;
 }
