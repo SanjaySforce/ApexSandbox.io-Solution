@@ -2,7 +2,7 @@ public List<Integer> evenNumbers(Integer n) {
     //code here
     List<Integer> evenNumArr = new List<Integer>();
     if(n != null){
-        for(Integer i = 1; i<=n+1; i++){
+        for(Integer i = 1; i<=n; i+=2){
             if(Math.mod(i,2) == 0){
                 evenNumArr.add(i);
             }
