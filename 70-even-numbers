@@ -4,7 +4,7 @@ public List<Integer> evenNumbers(Integer n) {
     if(n != null){
         for(Integer i = 1; i<n; i++){
             if(Math.mod(i,2) == 0){
-                evenNumArr.add[i];
+                evenNumArr.add(i);
             }
         }
     }
