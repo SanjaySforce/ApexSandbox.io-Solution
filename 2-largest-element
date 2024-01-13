@@ -1,17 +1,16 @@
 public static Integer findLargest(List<Integer> nums) {
 	//code here
     Integer largestNum = nums[0];
-        for(Integer i=0; i<nums.size(); i++){
-            if(i == nums.size()-1){
-                if(largestNum < nums[i]){
-                    largestNum = nums[i];
-                }
-            }else{
-            system.debug('else largestNum '+largestNum);
-                if(largestNum < nums[i+1]){
-                    largestNum = nums[i+1];
-                }
+    for(Integer i=0; i<nums.size(); i++){
+        if(i == nums.size()-1){
+           if(largestNum < nums[i]){
+                largestNum = nums[i];
+            }
+        }else{
+            if(largestNum < nums[i+1]){
+                largestNum = nums[i+1];
+            }
         }
-        return largestNum;
     }
+    return largestNum;
 }
