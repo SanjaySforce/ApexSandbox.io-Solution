@@ -1,8 +1,12 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
   // code here
-  String jsonString = '';
-  if(accounts.size() > 0){
-     jsonString = JSON.serialize(accounts);
+  String jsonString;
+  if(accounts == null){
+      jsonString = null;
+  }else if(accounts.size == 0){
+      jsonString = [];
+  }else{
+      jsonString = JSON.serialize(accounts);
   }
   return jsonString;
 }
