@@ -7,13 +7,13 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
     }else{
         for(string f : fields){
             if(f == 'Name' && acc.Name != null){
-                fieldList.add(f);
+                fieldList.add(acc.Name);
             }else if(f == 'BillingCity' && acc.BillingCity != null){
-                fieldList.add(f);
+                fieldList.add(acc.BillingCity);
             }else if(f == 'AnnualRevenue' && acc.AnnualRevenue != null){
-                fieldList.add(f);
+                fieldList.add(acc.AnnualRevenue);
             }else if(f == 'Rating' && acc.Rating != null){
-                fieldList.add(f);
+                fieldList.add(acc.Rating);
             }else{
                 fieldList.add(null);
             }
