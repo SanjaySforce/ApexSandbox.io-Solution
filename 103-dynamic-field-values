@@ -14,6 +14,8 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
                 fieldList.add(String.valueOf(acc.AnnualRevenue));
             }else if(f == 'Rating' && acc.Rating != null){
                 fieldList.add(acc.Rating);
+            }else if(f == 'Industry' && acc.Industry != null){
+                fieldList.add(acc.Industry);
             }else{
                 fieldList.add(null);
             }
