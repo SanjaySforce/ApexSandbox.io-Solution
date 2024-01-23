@@ -1,0 +1,23 @@
+public List<String> getFieldsValue(Account acc, List<String> fields)
+{
+    // code here
+    List<String> fieldList = new List<String>();
+    if(acc == null || fields == null){
+        fieldList.add(null);
+    }else{
+        for(field f : fieldList){
+            if(f == 'Name' && acc.Name != null){
+                fieldList.add(f);
+            }else if(f == 'BillingCity' && acc.BillingCity != null){
+                fieldList.add(f);
+            }else if(f == 'AnnualRevenue' && acc.AnnualRevenue != null){
+                fieldList.add(f);
+            }else if(f == 'Rating' && acc.Rating != null){
+                fieldList.add(f);
+            }else{
+                fieldList.add(null);
+            }
+        }
+    }
+
+}
