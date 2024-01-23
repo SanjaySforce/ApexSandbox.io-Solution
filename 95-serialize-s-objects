@@ -1,10 +1,15 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
   // code here
-  String jsonString;
-  if(accounts.size() > 0){
-      jsonString = JSON.serialize(accounts);
-  }else if(accounts == null){
-      jsonString = null;
-  }
-  return jsonString;
+  List<Map<String, Object>> accountList = new List<Map<String, Object>>();
+
+        for (Account acc : accounts) {
+            Map<String, Object> accountMap = new Map<String, Object>{
+                'attributes' => new Map<String, String>{ 'type' => 'Account' },
+                'Name' => acc.Name,
+                'BillingCity' => acc.BillingCity
+            };
+            accountList.add(accountMap);
+        }
+
+        return JSON.serialize(accountList);
 }
