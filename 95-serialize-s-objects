@@ -3,8 +3,6 @@ public String getAccountsInJSONFormat(List<Account> accounts){
   String jsonString;
   if(accounts == null){
       jsonString = null;
-  }else if(accounts.size == 0){
-      jsonString = [];
   }else{
       jsonString = JSON.serialize(accounts);
   }
