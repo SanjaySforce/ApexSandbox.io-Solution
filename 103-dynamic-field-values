@@ -5,7 +5,7 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
     if(acc == null || fields == null){
         fieldList.add(null);
     }else{
-        for(field f : fieldList){
+        for(string f : fieldList){
             if(f == 'Name' && acc.Name != null){
                 fieldList.add(f);
             }else if(f == 'BillingCity' && acc.BillingCity != null){
@@ -19,5 +19,5 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
             }
         }
     }
-
+    return fieldList;
 }
