@@ -1,0 +1,12 @@
+public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
+   // Code here
+   Sting accBillingCity = '';
+   if(accounts.size()>0 && accounts != null){
+       for(Account acc : accounts){
+           if(acc.BillingCity != null || acc.BillingCity != ''){
+                accBillingCity = acc.accBillingCity;
+           }
+       }
+   }
+   return accBillingCity;
+}
