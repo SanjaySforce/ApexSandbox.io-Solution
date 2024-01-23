@@ -1,11 +1,11 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
   // code here
-   String jsonString = null;
+   String jsonString;
 
-    if (accounts != null) {
-        if (!accounts.isEmpty()) {
-            jsonString = JSON.serialize(accounts);
-        }
+    if (accounts == null) {
+        jsonString = 'null'
+    }else{
+        jsonString = JSON.serialize(accounts);
     }
 
     return jsonString;
