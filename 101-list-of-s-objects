@@ -2,8 +2,8 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 {
     // code here
     List<sObject> wrapObj = new List<sObject>();
-    if(accounts == null || accounts.size() == 0){
-        if(contacts == null || contacts.size() == 0){
+    if(accounts == null){
+        if(contacts == null){
             return wrapObj;
         }else{
             wrapObj.addAll(contacts);
