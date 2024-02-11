@@ -1,0 +1,17 @@
+public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
+{
+    // code here
+    List<sObject> wrapObj = new List<sObject>();
+    if(accounts == null || accounts.size == 0){
+        if(contacts == null || contacts.size() == 0){
+            return wrapObj;
+        }else{
+            wrapObj.add(contacts);
+            return wrapObj;
+        }
+    }else{
+        wrapObj.add(accounts);
+        wrapObj.add(contacts);
+        return wrapObj;
+    }
+}
