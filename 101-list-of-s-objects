@@ -1,11 +1,11 @@
 public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
 {
     // code here
-    List<sObject> wrapObj = new List<sObject>();
+   List<sObject> wrapObj = new List<sObject>();
    if(accounts != null){
         wrapObj.addAll(accounts);
    }
-   if(contacts ! = null){
+   if(contacts != null){
         wrapObj.addAll(contacts);
    }
   return wrapObj;
