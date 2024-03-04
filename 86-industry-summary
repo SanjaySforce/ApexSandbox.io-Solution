@@ -4,12 +4,12 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     if(accounts.size() > 0){
         for(account a: accounts){
             if(a.Industry == 'Banking'){
-                Decimal industrySummary =+ a.AnnualRevenue;
-                industrySummaryMap.put(a.Industry,industrySummary);
-            }else if(a.Industry == 'Retail'){
+                Decimal bankingSummary =+ a.AnnualRevenue;
+                industrySummaryMap.put(a.Industry,bankingSummary);
+            }if(a.Industry == 'Retail'){
                 Decimal retailSummary =+ a.AnnualRevenue;
                 industrySummaryMap.put(a.Industry,retailSummary);
-            }else{
+            }if(a.Industry == 'Technology'){
                 Decimal technologySummary =+ a.AnnualRevenue;
                 industrySummaryMap.put(a.Industry,technologySummary);
             }
