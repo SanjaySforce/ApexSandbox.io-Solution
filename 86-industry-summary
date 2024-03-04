@@ -1,16 +1,17 @@
 public Map<String, Decimal> industrySummary(List<Account> accounts) {
     //code here
     Map<String, Decimal> industrySummaryMap = new Map<String, Decimal>();
-    Decimal totalSummary = 0;
-    List<String> industryList = new list<String>();
     if(accounts.size() > 0){
         for(account a: accounts){
-            totalSummary =+ a.AnnualRevenue;
-            industryList.add(a.Industry);
-        }
-        if(industryList.size() > 0 ){
-            for(String ind: industryList){
-                industrySummaryMap.put(ind,totalSummary);
+            if(a.Industry == 'Banking'){
+                Decimal industrySummary =+ a.AnnualRevenue;
+                industrySummaryMap.put(a.Industry,industrySummary);
+            }else if(a.Industry == 'Retail'){
+                Decimal retailSummary =+ a.AnnualRevenue;
+                industrySummaryMap.put(a.Industry,retailSummary);
+            }else{
+                Decimal technologySummary =+ a.AnnualRevenue;
+                industrySummaryMap.put(a.Industry,technologySummary);
             }
         }
     }
