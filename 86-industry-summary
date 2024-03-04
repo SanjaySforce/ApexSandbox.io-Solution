@@ -2,7 +2,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     //code here
     Map<String, Decimal> industrySummaryMap = new Map<String, Decimal>();
     Decimal totalSummary = 0;
-    Liat<String> industryList = new list<String>();
+    List<String> industryList = new list<String>();
     if(accounts.size() > 0){
         for(account a: accounts){
             totalSummary =+ a.AnnualRevenue;
