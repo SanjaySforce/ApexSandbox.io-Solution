@@ -1,17 +1,20 @@
 public Map<String, Decimal> industrySummary(List<Account> accounts) {
     //code here
-    Map<String, Decimal> industrySummaryMap = new Map<String, Decimal>();
+    Map<String, Decimal> industryRevenueMap = new Map<String, Decimal>();
     if(accounts.size() > 0){
-        for(account a: accounts){
-            if(a.Industry == 'Banking'){
-                Decimal bankingSummary =+ a.AnnualRevenue;
-                industrySummaryMap.put(a.Industry,bankingSummary);
-            }if(a.Industry == 'Retail'){
-                Decimal retailSummary =+ a.AnnualRevenue;
-                industrySummaryMap.put(a.Industry,retailSummary);
-            }if(a.Industry == 'Technology'){
-                Decimal technologySummary =+ a.AnnualRevenue;
-                industrySummaryMap.put(a.Industry,technologySummary);
+        for (Account acc : accounts) {
+            String industry = acc.Industry;
+            Decimal annualRevenue = acc.AnnualRevenue;
+            
+            if (industry != null && annualRevenue != null) {
+                if (industryRevenueMap.containsKey(industry)) {
+                    // If industry already exists in the map, add the revenue
+                    Decimal currentRevenue = industryRevenueMap.get(industry);
+                    industryRevenueMap.put(industry, currentRevenue + annualRevenue);
+                } else {
+                    // If industry is not present in the map, add it with the revenue
+                    industryRevenueMap.put(industry, annualRevenue);
+                }
             }
         }
     }
