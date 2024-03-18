@@ -2,9 +2,9 @@ public Map<String,String> getContextUserInformation(){
     //code here
     Map<String,String> userMap = new Map<String,String>();
     String loggedInUserId = userInfo.getUserId();
-    User loggedInUser = [Select id,Email,ProfileId,Profile.Type,Name from User where id=:loggedInUserId];
+    User loggedInUser = [Select id,Email,ProfileId,UserType,Name from User where id=:loggedInUserId];
     List<String> userLabels = new List<String>{'EmailId','ProfileId','Type','UserName'};
-    List<String> userFields = new List<String>{loggedInUser[0].Email,loggedInUser[0].ProfileId,loggedInUser[0].Profile.Type,loggedInUser[0].UserName};
+    List<String> userFields = new List<String>{loggedInUser[0].Email,loggedInUser[0].ProfileId,loggedInUser[0].UserType,loggedInUser[0].UserName};
     for(Integer i=0; i<userLabels.length; i++){
         userMap.put(userLabels[i],userFields[i]);
     }
