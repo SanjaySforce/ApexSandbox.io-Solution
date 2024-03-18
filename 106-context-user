@@ -1,7 +1,7 @@
 public Map<String,String> getContextUserInformation(){
     //code here
     Map<String,String> userMap = new Map<String,String>();
-    User loggedInUser = [Select id,Username,Email,ProfileId,UserType,Name from User where id=:userInfo.getUserId()];
+    User loggedInUser = [Select id,Username,Email,ProfileId,UserType from User where id=:userInfo.getUserId()];
      userMap.put('UserName', loggedInUser.Username);
      userMap.put('ProfileId', loggedInUser.ProfileId);
      userMap.put('EmailId', loggedInUser.Email);
