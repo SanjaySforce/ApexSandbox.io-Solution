@@ -8,6 +8,7 @@ public List<Account> getAccounts(List<Account> accounts) {
 // write extra class here 
 public class RevenueComparator implements Comparator<Account> {
     public Integer compare(Account a, Account b) {
-        return b.AnnualRevenue.compareTo(a.AnnualRevenue);
+        // Compare Annual Revenue of two accounts in reverse order for descending sorting
+        return (b.AnnualRevenue - a.AnnualRevenue > 0) ? 1 : ((b.AnnualRevenue - a.AnnualRevenue < 0) ? -1 : 0);
     }
 }
