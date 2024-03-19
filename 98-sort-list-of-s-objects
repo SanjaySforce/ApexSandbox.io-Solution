@@ -1,0 +1,13 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    // code here
+    set<String> accIds = new set<String>();
+    List<Account> accList = new List<Account>();
+    if(accounts.size() > 0){
+        for(Account acc: accounts){
+            accIds.add(acc.Id);
+        }
+      accList = [SELECT id,Name,AnnualRevenue fROM Account where id IN: accIds orderBy AnnualRevenue DESC]
+    }
+    return accList;
+}
+// write extra class here 
