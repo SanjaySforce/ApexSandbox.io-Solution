@@ -1,6 +1,6 @@
 public List<Account> getAccounts(List<Account> accounts) {
     // code here
-    if(accounts == null || accounts.size() == 0){
+    if(accounts == null){
         return null;
     }
     accounts.sort(new RevenueComparator());
