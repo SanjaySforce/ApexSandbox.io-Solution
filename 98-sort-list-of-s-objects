@@ -1,8 +1,13 @@
 public List<Account> getAccounts(List<Account> accounts) {
     // code here
     if(accounts.size() > 0){
-       accounts.sort((a, b) => b.AnnualRevenue.compareTo(a.AnnualRevenue));
+        accounts.sort(new RevenueComparator());
     }
     return accounts;
 }
 // write extra class here 
+public class RevenueComparator implements Comparator<Account> {
+    public Integer compare(Account a, Account b) {
+        return b.AnnualRevenue.compareTo(a.AnnualRevenue);
+    }
+}
