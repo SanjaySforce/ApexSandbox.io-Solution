@@ -2,9 +2,10 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     //code here
     set<Integer> intersectionSet = new set<Integer>();
     if(set2.size() > 0){
-        for(Integer i=0; i < set2.size(); i++){
-            if(set1.size() > 0 && set1.contains(set2[i])){
-                intersectionSet.add(set2[i]);
+        List<Integer> list2 = new List<Integer>(set2);
+        for(Integer i=0; i < list2.size(); i++){
+            if(set1.size() > 0 && set1.contains(list2[i])){
+                intersectionSet.add(list2[i]);
             }
         }
     }
