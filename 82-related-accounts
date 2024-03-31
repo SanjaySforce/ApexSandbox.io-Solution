@@ -1,0 +1,12 @@
+public Set<Id> accountIds(List<Opportunity> opps) {
+    //code here
+    set<Id> accountIds = new set<Id>();
+    if(opps.size() > 0){
+        for(Opportunity op: opps){
+            if(op != null && op.accountId != null){
+                accountIds.add(op.accountId);
+            }
+        }
+    }
+    return accountIds;
+}
