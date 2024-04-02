@@ -3,14 +3,14 @@ public Boolean isKeyAccount(Account a) {
     Boolean isKeyAccount = false;
     
     if(a != null && a.Industry != null && a.AnnualRevenue != null){
-        if(acc.Industry == 'Banking') {
-            isKeyAccount = acc.AnnualRevenue >= 600000;
-        } else if(acc.Industry == 'Technology') {
-            isKeyAccount = acc.AnnualRevenue >= 800000;
-        } else if(acc.Industry == 'Retail') {
-            isKeyAccount = acc.AnnualRevenue >= 2000000;
+        if(a.Industry == 'Banking') {
+            isKeyAccount = a.AnnualRevenue >= 600000;
+        } else if(a.Industry == 'Technology') {
+            isKeyAccount = a.AnnualRevenue >= 800000;
+        } else if(a.Industry == 'Retail') {
+            isKeyAccount = a.AnnualRevenue >= 2000000;
         } else {
-            isKeyAccount = acc.AnnualRevenue >= 500000;
+            isKeyAccount = a.AnnualRevenue >= 500000;
         }
     }
     return isKeyAccount;
