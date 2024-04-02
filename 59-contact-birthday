@@ -1,0 +1,10 @@
+public Boolean isBirthday(Contact c) {
+    //code here
+    Boolean isBirthday = false;
+    if(c != null && c.Birthdate != null){
+        if(c.Birthdate.Day() == Today().Day() && c.Birthdate.Month() == Today.Month()){
+            isBirthday = true;
+        }
+    }
+    return isBirthday;
+}
