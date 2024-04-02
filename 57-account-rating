@@ -5,7 +5,7 @@ public void setAccountRating(Account a) {
     // AnnualRevenue <= 100,000 --> Cold
     if(a.AnnualRevenue <= 100000){
         a.Rating = 'Cold';
-    }else if(a.AnnualRevenue > 100000 || a.AnnualRevenue <= 500000){
+    }else if(a.AnnualRevenue < 100000 || a.AnnualRevenue <= 500000){
          a.Rating = 'Warm';
     }else {
          a.Rating = 'Hot';
