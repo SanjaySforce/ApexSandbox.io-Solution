@@ -1,12 +1,16 @@
 public Boolean isKeyAccount(Account a) {
     //code here
     Boolean isKeyAccount = false;
+    
     if(a != null && a.Industry != null && a.AnnualRevenue != null){
-        if((a.Industry == 'Banking' && a.AnnualRevenue == 600000) 
-        || (a.Industry == 'Technology' && a.AnnualRevenue == 800000)
-        || (a.Industry == 'Retail' && a.AnnualRevenue == 2000000)
-        || (a.Industry == 'All others' && a.AnnualRevenue == 500000)){
-            isKeyAccount = true;
+        if(acc.Industry == 'Banking') {
+            isKeyAccount = acc.AnnualRevenue >= 600000;
+        } else if(acc.Industry == 'Technology') {
+            isKeyAccount = acc.AnnualRevenue >= 800000;
+        } else if(acc.Industry == 'Retail') {
+            isKeyAccount = acc.AnnualRevenue >= 2000000;
+        } else {
+            isKeyAccount = acc.AnnualRevenue >= 500000;
         }
     }
     return isKeyAccount;
