@@ -7,7 +7,7 @@ public Decimal average(List<Decimal> numbers){
             total += i;
         }
         avg = total/numbers.size();
-        avg.setScale(2);
+        avg = avg.setScale(2);
     }
     return avg;
 }
