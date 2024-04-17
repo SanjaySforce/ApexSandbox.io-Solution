@@ -1,0 +1,11 @@
+public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
+    //code here
+    List<String> fullNames = new List<String>();
+    if(firstNames.size() > 0 && lastNames.size() > 0){
+        for(String fName: firstNames){
+            for(string lName: lastName){
+                fullNames.add(fName+' '+lName);
+            }
+        }
+    }
+}
