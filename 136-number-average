@@ -3,7 +3,7 @@ public Decimal average(List<Decimal> numbers){
     Decimal avg = 0;
     if(numbers.size() > 0){
         Integer total = 0;
-        for(Integer i: numbers){
+        for(Decimal i: numbers){
             total += i;
         }
         avg = total/numbers.size();
