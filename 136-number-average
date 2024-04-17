@@ -1,0 +1,13 @@
+public Decimal average(List<Decimal> numbers){
+    // your code here
+    Decimal avg = 0;
+    if(numbers.size() > 0){
+        Integer total = 0;
+        for(Integer i: numbers){
+            total += i;
+        }
+        avg = total/numbers.size();
+        avg.setScale(2);
+    }
+    return avg;
+}
